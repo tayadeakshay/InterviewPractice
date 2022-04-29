@@ -41,6 +41,10 @@ public class Test {
 		
 		System.out.println("Sorting by Location : "+t3);
 		
+		String s1 = new String("A");
+		String s2 = new String("B");
+		System.out.println(s1.compareTo(s2));
+		
 	}
 
 }

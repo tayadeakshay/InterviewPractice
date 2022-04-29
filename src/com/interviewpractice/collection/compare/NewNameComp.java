@@ -6,7 +6,12 @@ public class NewNameComp implements Comparator<Employee>{
 
 	@Override
 	public int compare(Employee e1, Employee e2) {
-		return e1.name.compareTo(e2.name);
+		if(e1.id == e2.id)
+			return 0;
+		else if(e1.id > e2.id)
+			return 1;
+		else
+			return -1;
 		
 		
 	}
