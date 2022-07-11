@@ -2,21 +2,38 @@ package com.interviewpractice.string;
 
 class Gfg
 {
+	static int num;
+	static String mystr;
+
 	// constructor
 	Gfg()
 	{
-		System.out.println("Geeksforgeeks");
+		num = 100;
+		mystr = "Constructor";
 	}
+
+	// First Static block
+	static
 	{
-		System.out.println("Inside instance block");
+		System.out.println("Static Block 1");
+		num = 68;
+		mystr = "Block1";
 	}
-	
-	static Gfg a = new Gfg(); //line 8
+
+	// Second static block
+	static
+	{
+		System.out.println("Static Block 2");
+		num = 98;
+		mystr = "Block2";
+	}
 
 	public static void main(String args[])
 	{
-		Gfg b; //line 12
-		b = new Gfg();
+		Gfg a = new Gfg();
+		System.out.println("Value of num = " + a.num);
+		System.out.println("Value of mystr = " + a.mystr);
 	}
 }
+
 
